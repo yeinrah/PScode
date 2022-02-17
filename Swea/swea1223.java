@@ -20,10 +20,16 @@ public class swea1223 {
 						stack.push(c[i]);
 					//안 비어있을때
 					else {
-						// 곱하기 연산자면 바로 푸쉬
-						if (c[i] == '*')
+						// 곱하기 연산자면 스택 마지막이 +일때만 바로 푸쉬
+						if (c[i] == '*' && stack.peek() == '+')
 							stack.push(c[i]);
-						// 더하기 연산자면 팝하고 푸쉬
+						// *이고 +이외의 것이 맨위에 들어있는 상황이면 팝하고 푸쉬
+						else if (c[i] == '*' && stack.peek() != '+') {
+							while (!stack.isEmpty() && stack.peek() != '+')
+								res += stack.pop();
+							stack.push(c[i]);
+						}
+						// 더하기 연산자면 다 팝하고 푸쉬
 						else {
 							while (!stack.isEmpty())
 								res += stack.pop();
