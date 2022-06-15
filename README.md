@@ -8,3 +8,7 @@
     -   백준 : 클래스 이름 Main으로 변경
     -   코드업 : 클래스 이름 Main으로 변경
     -   SWEA : 클래스 이름 Solution으로 변경
+
+<hr>
+
+- 220616 [백준허브](https://chrome.google.com/webstore/detail/%EB%B0%B1%EC%A4%80%ED%97%88%EB%B8%8Cbaekjoonhub/ccammcjdkpgjmcpijpahlehmapgmphmk?hl=ko) 도입, 코드 업로드 자동화
