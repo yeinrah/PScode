@@ -1,7 +1,6 @@
 class Solution {
-    static int[] answer;
     public int[] solution(long[] numbers) {
-        answer = new int[numbers.length];
+        int[] answer = new int[numbers.length];
         for (int i = 0; i < numbers.length; i++) {
             StringBuilder sb = new StringBuilder(Long.toBinaryString(numbers[i]));
             int e = 0;
