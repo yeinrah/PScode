@@ -7,9 +7,9 @@ class Solution {
         while (all.length() < t * m)
             all.append(Integer.toString(i++, n));
         
-        for (int idx = p - 1; idx < all.length(); idx += m)
-            ans.append(all.charAt(idx));
+        for (int idx = 0; idx < t; idx++)
+            ans.append(all.charAt(idx * m + p - 1));
         
-        return ans.toString().toUpperCase().substring(0, t);
+        return ans.toString().toUpperCase();
     }
 }
