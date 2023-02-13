@@ -1,36 +1,13 @@
-import java.util.*;
-
 class Solution {
     public int solution(int x, int y, int n) {
-        int answer = 0;
-        Queue<Integer> q = new LinkedList<>();
-        Set<Integer> set = new HashSet<>();
-        
-        q.offer(x);
-        while (!q.isEmpty()) {
-            int size = q.size();
-            for (int i = 0; i < size; i++) {
-                if (q.peek() == y)
-                    return answer;
-                count(q.poll(), y, n, set, q);
-            }
-            answer++;
+        int[] dp = new int[y * 3 + 1];
+        for (int i = x + 1; i <= y; i++)
+            dp[i] = 3000001;
+        for (int i = x; i < y; i++) {
+            dp[i + n] = Math.min(dp[i + n], dp[i] + 1);
+            dp[i * 2] = Math.min(dp[i * 2], dp[i] + 1);
+            dp[i * 3] = Math.min(dp[i * 3], dp[i] + 1);
         }
-        return -1;
-    }
-    
-    public void count(int num, int y, int n, Set<Integer> set, Queue<Integer> q) {
-        if (num + n <= y && !set.contains(num + n)) {
-            set.add(num + n);
-            q.offer(num + n);
-        }
-        if (num * 2 <= y && !set.contains(num * 2)) {
-            set.add(num * 2);
-            q.offer(num * 2);
-        }
-        if (num * 3 <= y && !set.contains(num * 3)) {
-            set.add(num * 3);
-            q.offer(num * 3);
-        }
+        return dp[y] == 3000001 ? -1 : dp[y];
     }
 }
