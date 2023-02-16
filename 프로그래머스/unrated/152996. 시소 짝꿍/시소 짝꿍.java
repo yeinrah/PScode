@@ -16,9 +16,6 @@ class Solution {
             
             for (int j = i + 1; j < weights.length; j++) {
                 if (weights[i] == weights[j] ||
-                    weights[i] * 2 == weights[j] * 3 ||
-                    weights[i] * 2 == weights[j] * 4 ||
-                    weights[i] * 3 == weights[j] * 4 ||
                     weights[i] * 4 == weights[j] * 3 ||
                     weights[i] * 4 == weights[j] * 2 ||
                     weights[i] * 3 == weights[j] * 2)

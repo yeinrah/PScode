@@ -1,10 +1,10 @@
 # [unrated] 시소 짝꿍 - 152996 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/152996?language=java) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/152996) 
 
 ### 성능 요약
 
-메모리: 83.8 MB, 시간: 0.41 ms
+메모리: 74.3 MB, 시간: 0.44 ms
 
 ### 구분
 
