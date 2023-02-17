@@ -3,12 +3,8 @@ import java.util.*;
 class Solution {
     public String solution(int[] numbers) {
         String[] arr = new String[numbers.length];
-        boolean zero = true;
-        for (int i = 0; i < arr.length; i++) {
+        for (int i = 0; i < arr.length; i++)
             arr[i] = String.valueOf(numbers[i]);
-            if (numbers[i] != 0)
-                zero = false;
-        }
         
         Arrays.sort(arr, new Comparator<String>(){
             @Override
@@ -19,6 +15,6 @@ class Solution {
         StringBuilder sb = new StringBuilder();
         for (String s : arr)
             sb.append(s);
-        return zero ? "0" : sb.toString();
+        return sb.charAt(0) == '0' ? "0" : sb.toString();
     }
 }
